@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Faulty Webpage</title>
+    <!-- CSS corrected -->
+    <style>
+        body {
+            background: #ffffff;
+            font-family: Arial, sans-serif;  /*Colon was missing, corrected*/
+            color: white;
+            margin: 20px 10px; 
+        }
+        
+        #header {
+            font-weight: bold; /*Font-weight 70 is invalid, corrected to 'bold'*/
+            background-color: red; /*Color value was missing, corrected*/
+        }
+
+        .container {
+            width: 100%; /*Percentage sign missing, corrected to '100%'*/
+            padding: 10px 15px; /*Unit missing for second padding value, added 'px'*/
+            border: solid 1px black; /*Border width and color were missing, added '1px black'*/
+            display: flex; /*Colon was missing, corrected*/
+          
+        }
+
+        .menu-item {
+            text-decoration: none; /*Colon was missing, corrected*/
+            font-size: 16pt;
+            color:red;
+             /*Inline block is one word, corrected*/
+        }
+
+        p::after {
+            content: ""; /*Semi-colon was missing, corrected*/
+            font-size: 10px;
+        }
+
+        a {
+            text-decoration: underline; 
+            cursor: pointer; /*Colon was missing, corrected*/
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML corrected -->
+    <div id="header">
+        <h1>Welcome to Faulty Webpage</h1> <!-- Closing h1 tag was missing, added -->
+        <p>Here you will learn about different issues in web development</p>
+    </div>
+
+    <div class="container">
+        <ul>
+            <li class="menu-item">Home</li> <!-- Closing tag missing, corrected -->
+
+            <li class="menu-item">About Us</li>
+            <li class="menu-item">Contact</li> <!-- Closing tag missing, corrected -->
+        </ul>
+
+        <img src="Lec10.jpg" width="300" height="200">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> <!-- Closing p tag was missing, corrected -->
+
+        <button onclick="showAlert()">Click Me!</button>
+        <input type="text" id="username" name="username" placeholder="Enter your name"> <!-- Added 'id' to match JavaScript -->
+        <input type="button" value="Submit" onclick="validateForm()">
+        <br>
+        <a href="https://www.example.com">Visit Example.com</a>
+        <hr>
+    </div>
+
+    <!-- JavaScript corrected -->
+    <script>
+        function showAlert() {
+            alert("Hello World!"); /*Missing bracket was added*/
+        }
+
+        function validateForm() {
+            var username = document.getElementById("username").value; /*Corrected 'getElementbyId' to 'getElementById'*/
+            if (username === "") { /*Single '=' was incorrect, changed to '===' for comparison*/
+                alert("Username cannot be empty");
+            } else if (username.length < 3) {
+                alert("Username must be at least 3 characters long");
+            } else {
+                document.forms[0].submit(); /*Corrected 'document.form' to 'document.forms[0]'*/
+            }
+        }
+
+        document.getElementsByClassName("menu-item")[0].style.color = "green";
+          
+        const myArray = [1, 2, 3, 4, 5]; /*Corrected missing bracket*/
+        myArray.forEach(function(item) { /*'foreach' corrected to 'forEach'*/
+            console.log(item);
+        });
+
+        var number = 10;
+        if (number === 10) { /*Corrected single '=' to '===' for comparison*/
+            console.log("Number is ten");
+        }
+
+        for (var i = 0; i < 10; i++) { /*Added missing closing bracket*/
+            console.log(i);
+        }
+
+        let object = { key: "value" }; /*Trailing comma removed*/
+        alert("The object key is " + object.key);
+
+        const undefinedVariable = 6
+        console.log(undefinedVariable); 
+
+document.addEventListener("click", function() {
+    console.log("Document clicked!") 
+})/*Outer most bracket was open*/ 
+
+var missingSemicolon = 'This string is missing a semicolon' 
+
+let sum = 10 ;/*Additional +*/  
+
+var myFunc = function() {
+    console.log("Faulty function!")/*Inverted commas not closed*/ 
+} 
+
+let counter = 0;
+while (counter < 5) { /*Brackets missing for while condition*/ 
+    console.log(counter);
+    counter++;
+}
+</script>
+</body>
+</html>
