@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdul Moqeet</title>
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="DP.jpg" type="image/x-icon">
 <link rel="stylesheet" href="styling.css"> 
 </head>
 <body style="margin:0">
 
-    <nav>
+    <nav id="navbar">
         <a href="">Home</a>
-        <a href="#Education">Education</a>
+        <a href="#education">Education</a>
         <a href="">Skills</a>
         <a href="">Awards</a>
     </nav>
@@ -25,6 +25,38 @@
             </div>
         </div>
     </div>
+    <div id="education">
+        <h1>Education</h1>
+        <div id="education-card">
+            <div class="card">
+                <p>University</p>
+            </div>
+            <div class="card">
+                    <p>College</p>
+            </div>
+            <div class="card">
+                <p>School
+            </div>
+        </div>
+    </div>
+<dir>
+    <p>"اپنے مستقبل کی پیشگوئی کا بہترین طریقہ اسے تخلیق کرنا ہے "</p>
+</dir>
 
+
+
+<script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const scrollPosition = window.scrollY;
+
+        // Show the navbar after scrolling 100px down
+        if (scrollPosition > 200) {
+            navbar.style.display = 'flex'; // Show the navbar
+        } else {
+            navbar.style.display = 'none'; // Hide the navbar
+        }
+    });
+</script>
 </body>
 </html>

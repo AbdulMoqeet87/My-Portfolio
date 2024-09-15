@@ -2,8 +2,10 @@
 body{
     margin: 0;
     background-color: black;
+    
 }
 #cover {
+    margin-top: 5%;;
     background-color: black;
     width: 100%;
     height: 40vh;
@@ -11,6 +13,22 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#education h1 {
+    font-size:250%;
+    color: white;
+    text-align: center;
+}
+dir{
+    margin-top:15%;
+}
+dir p{
+    color: white;
+    font-size:150%;
+    text-align: center;;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
 }
 
 
@@ -26,35 +44,86 @@ body{
 #cover-text{
     margin-top: 150px;
 text-align: center;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
 }
-
+#cover-text h1:hover {
+    text-shadow: 0 10px 15px rgba(143, 142, 142, 0.801);
+}
 #cover img {
     width: 50%;
     height: auto;
     border-radius: 50%;
-    box-shadow: 100% gray;
     margin-top: 20%;
-}
-nav {
-    background-color: rgb(27, 26, 26);
-    height: 100%;
-    display: flex;
-    justify-content: right;
-    position: relative;
     
 }
 
+
+
+nav {
+    background-color: rgb(29, 28, 28);
+    width: 100%;
+    display: none;
+    justify-content: right;
+;position: fixed;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    top: 0;
+    left: 0;
+}
+
 nav a {
+    
     display: block; 
-    margin-top: 20px;
-    margin-right: 50px;
-    margin-left: 5px;
-    padding-bottom: 20px;
-    font-family:Arial, Helvetica, sans-serif;
+    float: left;
+    text-align: center;
+    padding: 16px 29px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
-    color: rgb(204, 200, 200);
+    color: rgb(167, 162, 162);
     font-weight: bold;
-    font-size: 100%;
+    font-size: 90%;
+}
+nav a:hover{
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding:15px 28px;
+    background-color: rgba(255, 255, 255, 0);
+}
+#education {
+    
+    margin-top: 23%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.card{
+    width: 10%;
+    height: 15%;
+    background-color:rgba(94, 94, 94, 0.747);
+    padding:7%;
+    margin-right:50px ;
+    border-radius: 9%;
+    margin-top: 5%;;
+    box-shadow: 0 0 15px white;
+    transition: all 0.3s ease;
+    
+}
+#education-card{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.card p{
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size:200%;;
+}
+.card:hover{
+    background-color: white;
+    color: grey;
+    box-shadow: 0 0 15px grey;
+}
+.card:hover h1{
+display: none;
 }
 @media (max-width: 740px) {
     #cover-content {
@@ -72,7 +141,7 @@ nav a {
         height: auto;
     }
     #cover-text{
-        margin-top: 0px;
-    
+        margin-top: 0px;    
     }
+    
 }
