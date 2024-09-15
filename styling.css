@@ -111,7 +111,51 @@ nav a:hover {
     text-align: center;
     flex-direction: column;
 }
+.Projcard {
+    width: 370px;
+    height: 260px;
+    background-color: rgba(12, 12, 12, 0.747);
+    margin-right: 80px;
+    border-radius: 9%;
+    margin-top: 7%;
+    box-shadow: 0 0 25px rgb(243, 243, 243);
+    transition: all 0.3s ease;
+    text-align: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.Projcard:hover{
+    box-shadow: 0 0 45px rgb(243, 243, 243);
+}
+#Projects h1{
+    font-size:150%;
+    margin-left: 130px;
+    
+}
 
+#Projects a{
+    text-decoration:none;
+    color: rgb(161, 157, 157) ;
+    font-size: 120%;
+}
+#Projects a:hover{
+color: white;
+}
+
+#Projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    
+    margin-left: 100px;
+}
+#Projects img{
+    
+    width: 100%;
+    border-radius: 20px;
+}
 #education-card {
     display: flex;
     flex-wrap: wrap;
@@ -208,6 +252,7 @@ nav a:hover {
 iframe{
     margin-left: 50px;
     margin-bottom: 100px;
+    border-radius: 25px;
 }
 .Insta{
     display: flex;
@@ -217,6 +262,7 @@ iframe{
 blockquote{
     width: 30px;
     height: 40px;;
+    border-radius: 25px;
 }
 @media (max-width: 740px) {
     #cover-content {
