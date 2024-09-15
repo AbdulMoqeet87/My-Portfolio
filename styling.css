@@ -60,7 +60,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
 
 
 nav {
-    background-color: rgb(29, 28, 28);
+    background-color: rgb(22, 22, 22);
     width: 100%;
     display: none;
     justify-content: right;
@@ -68,6 +68,7 @@ nav {
     border-bottom: 1px solid rgb(51, 51, 51);
     top: 0;
     left: 0;
+    transition: all 0.3s ease ;
 }
 
 nav a {
@@ -95,36 +96,54 @@ nav a:hover{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .card{
-    width: 10%;
-    height: 15%;
+    width: 230px;
+    height: 200px;
     background-color:rgba(94, 94, 94, 0.747);
-    padding:7%;
     margin-right:50px ;
     border-radius: 9%;
     margin-top: 5%;;
     box-shadow: 0 0 15px white;
     transition: all 0.3s ease;
+    text-align: center;
+    flex-direction: column; 
     
 }
 #education-card{
 display: flex;
 justify-content: center;
 align-items: center;
+text-align: center;
 }
-.card p{
+.card-title{
     color: #fff;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
+    font-family: 'Gill Sans';
+   
     font-size:200%;;
+    margin-top: 80px;;
+    font-weight: bold;
+    
+
 }
-.card:hover{
+/* .card:hover{
     background-color: white;
     color: grey;
+    
     box-shadow: 0 0 15px grey;
 }
-.card:hover h1{
+.card:hover p{
 display: none;
-}
+} */
+/* .card:hover::after 
+{
+    content: "Information_Technology_University   BsComputerScience   CGPA:3.58 ";
+    font-size: 150%;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    justify-content: center;
+    
+
+} */
 @media (max-width: 740px) {
     #cover-content {
         flex-direction: column; 

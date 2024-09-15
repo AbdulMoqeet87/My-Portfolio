@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdul Moqeet</title>
     <link rel="shortcut icon" href="DP.jpg" type="image/x-icon">
-<link rel="stylesheet" href="styling.css"> 
+    <link rel="stylesheet" href="styling.css"> 
 </head>
 <body style="margin:0">
 
@@ -16,6 +15,7 @@
         <a href="">Skills</a>
         <a href="">Awards</a>
     </nav>
+
     <div id="cover">
         <div id="cover-content">
             <img src="DP.jpg" alt="Profile Picture">            
@@ -25,38 +25,87 @@
             </div>
         </div>
     </div>
+
     <div id="education">
         <h1>Education</h1>
         <div id="education-card">
             <div class="card">
-                <p>University</p>
+                <p class="card-title">University</p>
             </div>
             <div class="card">
-                    <p>College</p>
+                <p class="card-title">College</p>
             </div>
             <div class="card">
-                <p>School
+                <p class="card-title">School</p>
             </div>
         </div>
     </div>
-<dir>
-    <p>"اپنے مستقبل کی پیشگوئی کا بہترین طریقہ اسے تخلیق کرنا ہے "</p>
-</dir>
 
+    <dir>
+        <p>"اپنے مستقبل کی پیشگوئی کا بہترین طریقہ اسے تخلیق کرنا ہے "</p>
+    </dir>
 
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            const coverContent = document.getElementById('cover-content');
+            const scrollPosition = window.scrollY;
 
-<script>
-    window.addEventListener('scroll', function() {
-        const navbar = document.getElementById('navbar');
-        const scrollPosition = window.scrollY;
+          
+            if (scrollPosition > 504) {
+                navbar.style.display = 'flex'; 
+                navbar.style.transition='all 0.3s ease';
+            } else {
+                navbar.style.display = 'none'; 
+            }
 
-        // Show the navbar after scrolling 100px down
-        if (scrollPosition > 200) {
-            navbar.style.display = 'flex'; // Show the navbar
-        } else {
-            navbar.style.display = 'none'; // Hide the navbar
-        }
+            
+            coverContent.style.transform = `translateX(${scrollPosition * 0.5}px)`;
+        });
+
+        document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('mouseover', () => {
+        const title = card.querySelector('.card-title');
+        
+        if (!title.dataset.originalText) {
+            title.dataset.originalText = title.innerText; 
+        }        
+        if(title.dataset.originalText==="University")
+        {title.innerHTML = "<p><b>Information Technology<br> University</b></p><p>BS Computer Science</p><p>CGPA: 3.58</p>"}
+       else if(title.dataset.originalText==="College")
+        {title.innerHTML = "<p><b>Kips College<br></b></p><p>Fsc Pre-Engineering</p><p>Grade : A+</p>"}
+       else if(title.dataset.originalText==="School")
+       {
+        title.innerHTML = "<p><b>Ch. Rehmat School<br></b></p><p>Matriculation</p><p>Grade : A+</p>";
+       }
+        title.style.color = 'black';
+        title.style.fontFamily ='Gill Sans';
+        card.style.backgroundColor ='white';
+        title.style.fontWeight = 'normal';
+        title.style.fontSize = '100%';
+        title.style.marginTop = '40px';
+        card.style.width='230px';
+        card.style.height='200px';
+        title.style.flexDirection = 'column';
     });
-</script>
+
+    card.addEventListener('mouseout', () => {
+        const title = card.querySelector('.card-title');
+
+        // Restore the original text
+        title.innerText = title.dataset.originalText;
+        title.style.color = 'white';
+        card.style.backgroundColor = 'rgba(94, 94, 94, 0.747)';
+        title.style.fontWeight = 'bold';
+        title.style.fontSize = '200%';
+        card.style.width='230px';
+        card.style.height='200px';
+        title.style.marginTop ='80px';
+       
+    });
+});
+       
+    </script>
+
 </body>
 </html>
