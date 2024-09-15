@@ -6,13 +6,15 @@
     <title>Abdul Moqeet</title>
     <link rel="shortcut icon" href="DP.jpg" type="image/x-icon">
     <link rel="stylesheet" href="styling.css"> 
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body style="margin:0">
 
     <nav id="navbar">
         <a href="">Home</a>
         <a href="#education">Education</a>
-        <a href="">Skills</a>
+        <a href="#skills">Skills</a>
         <a href="">Awards</a>
     </nav>
 
@@ -21,7 +23,9 @@
             <img src="DP.jpg" alt="Profile Picture">            
             <div id="cover-text">
                 <h1>ABDUL MOQEET</h1>
-                <h3>Computer Scientist</h3>
+                <h3 style="line-height: 2"><i>"Hi, I'm Abdul Moqeet, a Computer Science student 
+                <br>    passionate about coding, teaching, and creativity.
+                <br>Explore my portfolio to connect with my work"</i></h3>
             </div>
         </div>
     </div>
@@ -40,10 +44,68 @@
             </div>
         </div>
     </div>
-
     <dir>
         <p>"اپنے مستقبل کی پیشگوئی کا بہترین طریقہ اسے تخلیق کرنا ہے "</p>
     </dir>
+    <h1 class="skillHeading" id="skills">Skills</h1>
+    <div class="skills-container">
+        
+        <div class="skill cpp">
+            <i class="fab fa-cuttlefish"></i>
+            <div class="circle-wrap" style="--percent: 80; --color: #f34b7d;">
+                <div class="inside-circle">80%</div>
+            </div>
+            <p>C++</p>
+        </div>
+
+        <div class="skill sql">
+            <i class="fas fa-database"></i>
+            <div class="circle-wrap" style="--percent: 75; --color: #f29111;">
+                <div class="inside-circle">75%</div>
+            </div>
+            <p>SQL</p>
+        </div>
+
+        
+        <div class="skill python">
+            <i class="fab fa-python"></i>
+            <div class="circle-wrap" style="--percent: 90; --color: #3776ab;">
+                <div class="inside-circle">90%</div>
+            </div>
+            <p>Python</p>
+        </div>
+
+        <div class="skill html">
+            <i class="fab fa-html5"></i>
+            <div class="circle-wrap" style="--percent: 85; --color: #e34c26;">
+                <div class="inside-circle">85%</div>
+            </div>
+            <p>HTML</p>
+        </div>
+
+        <div class="skill css">
+            <i class="fab fa-css3-alt"></i>
+            <div class="circle-wrap" style="--percent: 80; --color: #264de4;">
+                <div class="inside-circle">80%</div>
+            </div>
+            <p>CSS</p>
+        </div>
+
+        <div class="skill js">
+            <i class="fab fa-js"></i>
+            <div class="circle-wrap" style="--percent: 75; --color: #f7df1e;">
+                <div class="inside-circle">75%</div>
+            </div>
+            <p>JavaScript</p>
+        </div>
+
+    </div>
+<div id="Pursuits">
+    <h1>Online Teaching</h1>
+    <iframe width="370" height="220" src="https://www.youtube.com/embed/UOVopHFQn2M?si=0OSzvMwKX4yqEI2r" frameborder="2" allow="accelerometer; autoplay"></iframe>
+    <iframe width="370" height="220" src="https://www.youtube.com/embed/Z_TthTVHN_4?start=235" frameborder="2" allow="accelerometer; autoplay; " ></iframe>
+    <iframe width="370" height="220" src="https://www.youtube.com/embed/X0fo8QJnv7A?si=QwKBdjOtL_7HQM61" frameborder="2" allow="accelerometer; autoplay;" ></iframe>
+</div>
 
     <script>
         window.addEventListener('scroll', function() {
@@ -51,60 +113,55 @@
             const coverContent = document.getElementById('cover-content');
             const scrollPosition = window.scrollY;
 
-          
-            if (scrollPosition > 504) {
+            if (scrollPosition > 454) {
                 navbar.style.display = 'flex'; 
                 navbar.style.transition='all 0.3s ease';
             } else {
                 navbar.style.display = 'none'; 
             }
 
-            
             coverContent.style.transform = `translateX(${scrollPosition * 0.5}px)`;
         });
 
         document.querySelectorAll('.card').forEach(card => {
-        card.addEventListener('mouseover', () => {
-        const title = card.querySelector('.card-title');
-        
-        if (!title.dataset.originalText) {
-            title.dataset.originalText = title.innerText; 
-        }        
-        if(title.dataset.originalText==="University")
-        {title.innerHTML = "<p><b>Information Technology<br> University</b></p><p>BS Computer Science</p><p>CGPA: 3.58</p>"}
-       else if(title.dataset.originalText==="College")
-        {title.innerHTML = "<p><b>Kips College<br></b></p><p>Fsc Pre-Engineering</p><p>Grade : A+</p>"}
-       else if(title.dataset.originalText==="School")
-       {
-        title.innerHTML = "<p><b>Ch. Rehmat School<br></b></p><p>Matriculation</p><p>Grade : A+</p>";
-       }
-        title.style.color = 'black';
-        title.style.fontFamily ='Gill Sans';
-        card.style.backgroundColor ='white';
-        title.style.fontWeight = 'normal';
-        title.style.fontSize = '100%';
-        title.style.marginTop = '40px';
-        card.style.width='230px';
-        card.style.height='200px';
-        title.style.flexDirection = 'column';
-    });
+            card.addEventListener('mouseover', () => {
+                const title = card.querySelector('.card-title');
 
-    card.addEventListener('mouseout', () => {
-        const title = card.querySelector('.card-title');
+                if (!title.dataset.originalText) {
+                    title.dataset.originalText = title.innerText; 
+                }        
+                if(title.dataset.originalText==="University") {
+                    title.innerHTML = "<p><b>Information Technology<br> University</b></p><p>BS Computer Science</p><p>CGPA: 3.58</p>"
+                } else if(title.dataset.originalText==="College") {
+                    title.innerHTML = "<p><b>Kips College<br></b></p><p>Fsc Pre-Engineering</p><p>Grade : A+</p>"
+                } else if(title.dataset.originalText==="School") {
+                    title.innerHTML = "<p><b>Ch. Rehmat School<br></b></p><p>Matriculation</p><p>Grade : A+</p>";
+                }
+                title.style.color = 'black';
+                title.style.fontFamily ='Gill Sans';
+                card.style.backgroundColor ='white';
+                title.style.fontWeight = 'normal';
+                title.style.fontSize = '100%';
+                title.style.marginTop = '40px';
+                card.style.width='230px';
+                card.style.height='200px';
+                title.style.flexDirection = 'column';
+            });
 
-        // Restore the original text
-        title.innerText = title.dataset.originalText;
-        title.style.color = 'white';
-        card.style.backgroundColor = 'rgba(94, 94, 94, 0.747)';
-        title.style.fontWeight = 'bold';
-        title.style.fontSize = '200%';
-        card.style.width='230px';
-        card.style.height='200px';
-        title.style.marginTop ='80px';
-       
-    });
-});
-       
+            card.addEventListener('mouseout', () => {
+                const title = card.querySelector('.card-title');
+
+                // Restore the original text
+                title.innerText = title.dataset.originalText;
+                title.style.color = 'white';
+                card.style.backgroundColor = 'rgba(94, 94, 94, 0.747)';
+                title.style.fontWeight = 'bold';
+                title.style.fontSize = '200%';
+                card.style.width='230px';
+                card.style.height='200px';
+                title.style.marginTop ='80px';
+            });
+        });
     </script>
 
 </body>

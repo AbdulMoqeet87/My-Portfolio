@@ -1,11 +1,10 @@
-
-body{
+body {
     margin: 0;
     background-color: black;
-    
 }
+
 #cover {
-    margin-top: 5%;;
+    margin-top: 5%;
     background-color: black;
     width: 100%;
     height: 40vh;
@@ -15,22 +14,16 @@ body{
     align-items: center;
 }
 
-#education h1 {
-    font-size:250%;
-    color: white;
-    text-align: center;
-}
-dir{
-    margin-top:15%;
-}
-dir p{
-    color: white;
-    font-size:150%;
-    text-align: center;;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+dir {
+    margin-top: 15%;
 }
 
+dir p {
+    color: white;
+    font-size: 150%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 #cover-content {
     display: flex;
@@ -38,42 +31,45 @@ dir p{
 }
 
 #cover h1 {
-    font-size: 350%;   
+    font-size: 350%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#cover h3{
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-weight: normal;
+font-size: 1em;
+}
+#cover-text {
+    margin-top: 150px;
+    text-align: center;
+    
 }
 
-#cover-text{
-    margin-top: 150px;
-text-align: center;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
-}
 #cover-text h1:hover {
     text-shadow: 0 10px 15px rgba(143, 142, 142, 0.801);
 }
+
 #cover img {
     width: 50%;
     height: auto;
     border-radius: 50%;
     margin-top: 20%;
-    
 }
-
-
 
 nav {
     background-color: rgb(22, 22, 22);
     width: 100%;
     display: none;
     justify-content: right;
-;position: fixed;
+    position: fixed;
     border-bottom: 1px solid rgb(51, 51, 51);
     top: 0;
     left: 0;
-    transition: all 0.3s ease ;
+    transition: all 0.3s ease;
 }
 
 nav a {
-    
-    display: block; 
+    display: block;
     float: left;
     text-align: center;
     padding: 16px 29px;
@@ -83,84 +79,153 @@ nav a {
     font-weight: bold;
     font-size: 90%;
 }
-nav a:hover{
+
+nav a:hover {
     color: white;
     border: 1px solid white;
     border-radius: 3px;
-    padding:15px 28px;
+    padding: 15px 28px;
     background-color: rgba(255, 255, 255, 0);
 }
+
+#education h1 {
+    font-size: 250%;
+    color: white;
+    text-align: center;
+}
+
 #education {
-    
     margin-top: 23%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.card{
+
+.card {
     width: 230px;
     height: 200px;
-    background-color:rgba(94, 94, 94, 0.747);
-    margin-right:50px ;
+    background-color: rgba(94, 94, 94, 0.747);
+    margin-right: 80px;
     border-radius: 9%;
-    margin-top: 5%;;
+    margin-top: 5%;
     box-shadow: 0 0 15px white;
     transition: all 0.3s ease;
     text-align: center;
-    flex-direction: column; 
-    
+    flex-direction: column;
 }
-#education-card{
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
+
+#education-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    text-align: center;
+    margin-left: 100px;
 }
-.card-title{
+
+.card-title {
     color: #fff;
     font-family: 'Gill Sans';
-   
-    font-size:200%;;
-    margin-top: 80px;;
+    font-size: 200%;
+    margin-top: 80px;
     font-weight: bold;
-    
+}
 
-}
-/* .card:hover{
-    background-color: white;
-    color: grey;
-    
-    box-shadow: 0 0 15px grey;
-}
-.card:hover p{
-display: none;
-} */
-/* .card:hover::after 
-{
-    content: "Information_Technology_University   BsComputerScience   CGPA:3.58 ";
-    font-size: 150%;
-    color: black;
+.skillHeading {
+    margin-top: 10%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 250%;
+    color: white;
     text-align: center;
-    font-weight: bold;
-    justify-content: center;
-    
+}
 
-} */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 900px;
+    margin-left: 200px;
+    margin-top: 90px;
+}
+
+.skill {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.skill i {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.skill.cpp i { color: #f34b7d; } /* C++ pink */
+.skill.sql i { color: #f29111; } /* SQL orange */
+.skill.python i { color: #3776ab; } /* Python blue */
+.skill.html i { color: #e34c26; } /* HTML orange */
+.skill.css i { color: #264de4; } /* CSS blue */
+.skill.js i { color: #f7df1e; } /* JavaScript yellow */
+
+
+.circle-wrap {
+    width: 140px;
+    height: 140px;
+    background: conic-gradient(
+        var(--color) calc(var(--percent) * 1%), 
+        #cecdcd calc(var(--percent) * 1%)
+    );
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.inside-circle {
+    background: #0a0a0a;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+}
+#Pursuits{
+    margin-top: 100px;
+}
+#Pursuits h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 250%;
+    color: white;
+    text-align: center;
+    margin-bottom: 100px;
+}
+iframe{
+    margin-left: 50px;
+}
+
 @media (max-width: 740px) {
     #cover-content {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     #cover h1 {
-        margin-left: 0; 
-        margin-top: 10px; 
+        margin-left: 0;
+        margin-top: 10px;
         font-size: 200%;
     }
 
     #cover img {
-        width: 60%; 
+        width: 60%;
         height: auto;
     }
-    #cover-text{
-        margin-top: 0px;    
+
+    #cover-text {
+        margin-top: 0px;
     }
-    
 }
