@@ -25,6 +25,16 @@
     {"link":"https://www.instagram.com/p/CLPCWf-BE7h/?utm_source=ig_embed&amp;utm_campaign=loading"},
     {"link":"https://www.instagram.com/p/CPa_Te7BF1k/?utm_source=ig_embed&amp;utm_campaign=loading"},
     {"link":"https://www.instagram.com/p/CuQ7p0tohMd/?utm_source=ig_embed&amp;utm_campaign=loading"}
+],
+"skills": [
+    {"name":"C++","percentage":"80"},
+    {"name":"Python","percentage":"50"},
+    {"name":"SQL","percentage":"70"},
+    {"name":"HTML","percentage":"70"},
+    {"name":"JS","percentage":"50"},
+    {"name":"CSS","percentage":"60"}
+    
+
 ]
 
 }

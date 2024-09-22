@@ -207,12 +207,8 @@ color: white;
     margin-bottom: 15px;
 }
 
-.skill.cpp i { color: #f34b7d; } /* C++ pink */
-.skill.sql i { color: #f29111; } /* SQL orange */
-.skill.python i { color: #3776ab; } /* Python blue */
-.skill.html i { color: #e34c26; } /* HTML orange */
-.skill.css i { color: #264de4; } /* CSS blue */
-.skill.js i { color: #f7df1e; } /* JavaScript yellow */
+.skill.clr i { color: #3776ab; } /* Python blue */
+
 
 
 .circle-wrap {
