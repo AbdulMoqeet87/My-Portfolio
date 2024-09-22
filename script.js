@@ -1,15 +1,29 @@
-const NavObjects = [
-    { "title": "Home", "href": '#' },
-    { "title": "Education", "href": "#education" },
-    { "title": "Skills", "href": "#skills"},
-    { "title": "Projects", "href":"#Projects" },
-    { "title": "Pursuits", "href": "#Pursuits" }
-];
 
 
-function populateNav() {
-    const rootDiv = document.getElementById("navbar");
-    rootDiv.innerHTML = NavObjects.map(n => 
-        `<a href="${n.href}">${n.title}</a>`
-    ).join('');
-}
+fetch('User.json')
+    .then(response => response.json())  // Convert the response to a JSON object
+    .then(data => {
+ 
+        console.log(data);
+        const Cover= document.getElementById("cover-content");
+        
+       Cover.innerHTML= 
+       `<img src=${data.user.img} alt="Profile Picture">            
+            <div id="cover-text">
+                <h1>${data.user.Name}</h1>
+                <h3 style="line-height: 2 "><i>${data.user.description}</i></h3>
+                </div>`
+                ;
+        
+        const education = document.getElementById("education-card");
+        education.innerHTML=data.user.education.map(e=>
+            `<div class="card">
+                    <p class="card-title">${e.title}</p>
+                </div>`
+        ).join('');
+        
+        
+    })
+    
+
+

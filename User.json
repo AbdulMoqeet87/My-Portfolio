@@ -1,0 +1,14 @@
+{  
+"user":{
+
+"Name":"Abdul Moqeet",
+ "img":"DP.jpg",
+ "description":"Hi, I'm Abdul Moqeet, a Computer Science student passionate about coding, teaching, and creativity.Explore my portfolio to connect with my work"   
+,
+      "education":[
+    {"title":"University"},
+    {"title":"College"},
+    {"title":"School"}]
+}
+
+}

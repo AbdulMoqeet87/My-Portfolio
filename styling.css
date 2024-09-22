@@ -38,6 +38,7 @@ dir p {
 font-family:Georgia, 'Times New Roman', Times, serif;
 font-weight: normal;
 font-size: 1em;
+max-width: 430px;
 }
 #cover-text {
     margin-top: 150px;
