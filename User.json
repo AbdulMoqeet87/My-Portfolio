@@ -6,9 +6,9 @@
  "description":"Hi, I'm Abdul Moqeet, a Computer Science student passionate about coding, teaching, and creativity.Explore my portfolio to connect with my work"   
 ,
       "education":[
-    {"title":"University"},
-    {"title":"College"},
-    {"title":"School"}]
+    {"title":"University","name":"Information technology University","dis":"BS Computer Science","gpa":"3.58"},
+    {"title":"College","name":"Kips College","dis":"Fsc Pre-Engineering","gpa":"A+"},
+    {"title":"School","name":"Ch.Rehmat Ali School","dis":"Matriculation","gpa":"A+"}]
 }
 
 }
