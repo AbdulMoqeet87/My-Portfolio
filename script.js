@@ -25,6 +25,23 @@ fetch('User.json')
         const Quote = document.getElementById("quote");  // Fixed this line
         Quote.innerHTML = `<p>${data.user.quote}</p>`;
 
+        const Projects=document.getElementById("Projects");
+        Projects.innerHTML=  data.user.projects.map(p=>
+            ` <div>
+    <h1 style="color: white;">${p.name}</h1>
+ 
+        <div class="Projcard">
+            <img src="${p.img}" alt="Ludo Game">
+            <a href="${p.git}">GitHub | </a>
+            <a href="${p.linkedin}">LinkedIn</a>
+        </div>
+    </div>`).join('');
+    
+    const Youtube= document.getElementById("Youtube");
+    Youtube.innerHTML=`<h1>Online Teaching</h1>`+ data.user.youtube.map(y=>
+        ` 
+          <iframe width="370" height="220" src="${y.link}" frameborder="2" allow="accelerometer; autoplay"></iframe>`
+    )
 
     })
     .catch(error => console.error('Error fetching data:', error));  
