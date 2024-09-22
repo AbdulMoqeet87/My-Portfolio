@@ -21,6 +21,11 @@ fetch('User.json')
         ).join('');
 
         setupCardHoverEffects(data.user.education); 
+
+        const Quote = document.getElementById("quote");  // Fixed this line
+        Quote.innerHTML = `<p>${data.user.quote}</p>`;
+
+
     })
     .catch(error => console.error('Error fetching data:', error));  
 

@@ -14,11 +14,11 @@ body {
     align-items: center;
 }
 
-dir {
+#quote{
     margin-top: 15%;
 }
 
-dir p {
+#quote p {
     color: white;
     font-size: 150%;
     text-align: center;
